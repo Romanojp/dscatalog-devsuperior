@@ -1,6 +1,5 @@
 package com.devsuperior.dscatalog.resources;
 
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doNothing;
@@ -25,7 +24,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
-
 import com.devsuperior.dscatalog.dto.ProductDTO;
 import com.devsuperior.dscatalog.services.ProductService;
 import com.devsuperior.dscatalog.services.exceptions.DatabaseException;
@@ -34,7 +32,7 @@ import com.devsuperior.dscatalog.tests.Factory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @WebMvcTest(ProductResource.class)
-public class ProductResourcesTests {
+public class ProductResourceTests {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -177,3 +175,14 @@ public class ProductResourcesTests {
 		result.andExpect(status().isNotFound());
 	} 
 }
+
+
+
+
+
+
+
+
+
+
+

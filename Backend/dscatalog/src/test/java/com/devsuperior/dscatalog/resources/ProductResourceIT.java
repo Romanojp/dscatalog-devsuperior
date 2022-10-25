@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-public class ProductResouceIT {
+public class ProductResourceIT {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -60,7 +60,7 @@ public class ProductResouceIT {
 	@Test
 	public void updateShouldReturnProductDTOWhenIdExists() throws Exception {
 		
-		ProductDTO productDTO = Factory.createProductDto();
+		ProductDTO productDTO = Factory.createProductDTO();
 		String jsonBody = objectMapper.writeValueAsString(productDTO);
 		
 		String expectedName = productDTO.getName();
@@ -81,7 +81,7 @@ public class ProductResouceIT {
 	@Test
 	public void updateShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
 		
-		ProductDTO productDTO = Factory.createProductDto();
+		ProductDTO productDTO = Factory.createProductDTO();
 		String jsonBody = objectMapper.writeValueAsString(productDTO);
 		
 		ResultActions result = 

@@ -87,4 +87,3 @@ public class ProductServiceIT {
 		Assertions.assertEquals("PC Gamer Alfa", result.getContent().get(2).getName());		
 	}
 }
-
