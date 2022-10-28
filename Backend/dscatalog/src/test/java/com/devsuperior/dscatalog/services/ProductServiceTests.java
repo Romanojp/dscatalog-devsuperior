@@ -68,7 +68,7 @@ public class ProductServiceTests {
 		
 		Pageable pageable = PageRequest.of(0, 12);
 		
-		Page<ProductDTO> result = service.findAllPaged(dependentId, pageable);
+		Page<ProductDTO> result = service.findAllPaged(dependentId, null, pageable);
 		
 		Assertions.assertNotNull(result);
 		
